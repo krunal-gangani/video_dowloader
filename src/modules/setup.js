@@ -43,8 +43,7 @@ function setup() {
                 rl.question(q, apiURL => {
                     ob['apiURL'] = `http://localhost:9000/`;
                     ob['apiPort'] = 9000;
-                    // if (apiURL && apiURL !== "localhost") ob['apiURL'] = `https://${apiURL.toLowerCase()}/`;
-                    if (apiURL && apiURL !== "localhost") ob['apiURL'] = `http://${apiURL.toLowerCase()}/`;
+                    if (apiURL && apiURL !== "localhost") ob['apiURL'] = `https://${apiURL.toLowerCase()}/`;
 
                     console.log(Bright("\nGreat! Now, what port will it be running on? (9000)"));
 
@@ -76,8 +75,7 @@ function setup() {
                 rl.question(q, webURL => {
                     ob['webURL'] = `http://localhost:9001/`;
                     ob['webPort'] = 9001;
-                    // if (webURL && webURL !== "localhost") ob['webURL'] = `https://${webURL.toLowerCase()}/`;
-                    if (webURL && webURL !== "localhost") ob['webURL'] = `http://${webURL.toLowerCase()}/`;
+                    if (webURL && webURL !== "localhost") ob['webURL'] = `https://${webURL.toLowerCase()}/`;
     
                     console.log(
                         Bright("\nGreat! Now, what port will it be running on? (9001)")
@@ -91,11 +89,9 @@ function setup() {
                         );
 
                         rl.question(q, apiURL => {
-                            // ob['apiURL'] = `https://${apiURL.toLowerCase()}/`;
-                            ob['apiURL'] = `http://${apiURL.toLowerCase()}/`;
+                            ob['apiURL'] = `https://${apiURL.toLowerCase()}/`;
                             if (apiURL.includes(':')) ob['apiURL'] = `http://${apiURL.toLowerCase()}/`;
-                            // if (!apiURL) ob['apiURL'] = "https://tubidi.buzz/api/";
-                            if (!apiURL) ob['apiURL'] = "http://tubidi.buzz/backend/";
+                            if (!apiURL) ob['apiURL'] = "https://co.wuk.sh/";
                             final()
                         })
                     });
