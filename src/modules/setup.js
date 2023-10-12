@@ -91,7 +91,7 @@ function setup() {
                         rl.question(q, apiURL => {
                             ob['apiURL'] = `https://${apiURL.toLowerCase()}/`;
                             if (apiURL.includes(':')) ob['apiURL'] = `http://${apiURL.toLowerCase()}/`;
-                            if (!apiURL) ob['apiURL'] = "http://tubidi.buzz/api/";
+                            if (!apiURL) ob['apiURL'] = "https://tubidi.buzz/api/";
                             final()
                         })
                     });
